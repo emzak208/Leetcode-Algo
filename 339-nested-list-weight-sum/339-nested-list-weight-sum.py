@@ -51,8 +51,9 @@ class Solution:
         total = 0
         
         while queue:
-            for i in range(len(queue)):
-                nested = queue.pop()
+            original_len = len(queue)
+            for i in range(original_len):
+                nested = queue.pop() # NOTE: NOT popleft 
                 if nested.isInteger():
                     total += depth * nested.getInteger()
                 else: 
@@ -61,7 +62,4 @@ class Solution:
             
         return total 
     
-                    
-            
-        
-        
+    
