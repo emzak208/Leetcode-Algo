@@ -20,7 +20,7 @@ class Solution:
         visited.add((x,y))
         
         while queue:
-            x, y = queue.popleft()
+            x, y = queue.popleft() # if use pop instead of popleft then it's dfs
             visited.add((x, y))
             for delta_x, delta_y in directions:
                 next_x = x + delta_x
