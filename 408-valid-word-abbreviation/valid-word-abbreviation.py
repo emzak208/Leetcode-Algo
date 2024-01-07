@@ -4,6 +4,7 @@ class Solution:
 
         # loop through abbr 
         while i < len(abbr): 
+            # if number in abbr is too long, can directly check word
             if j >= len(word):
                 return False 
 
