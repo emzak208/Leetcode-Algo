@@ -4,6 +4,7 @@ class Solution:
         index_to_remove = set() # keep track of ")" to be removed
         stack = [] # keep track of "(" to be removed
 
+        # O(n)
         for i, c in enumerate(s):
             if c not in "()":
                 continue 
@@ -16,13 +17,15 @@ class Solution:
                 stack.pop() # remove the top of stack
         
         # combine all "(" & ")" to be removed
-        index_to_remove = index_to_remove.union(set(stack)) 
+        index_to_remove = index_to_remove.union(set(stack)) # O(n)
         string_builder = []
+        # O(n)
         for i, c in enumerate(s):
+            # O(1)
             if i not in index_to_remove:
                 string_builder.append(c)
         
-        return "".join(string_builder)
+        return "".join(string_builder) # O(n)
             
 
 
