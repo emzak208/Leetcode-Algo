@@ -1,5 +1,6 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
+        # Method 1: stack and string builder, O(N)
         index_to_remove = set() # keep track of ")" to be removed
         stack = [] # keep track of "(" to be removed
 
