@@ -28,8 +28,8 @@ class Solution:
         p_copy = p
         q_copy = q
         
-        if p_copy == q_copy:
-            return p_copy
+        # if p_copy == q_copy:
+        #     return p_copy
 
         while p_copy != q_copy:
             p_copy = p_copy.parent
