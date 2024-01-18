@@ -21,12 +21,12 @@ class Solution:
         while l < r: 
             mid = (l + r) // 2 
 
-            if self.prefix_sum[mid] < target:
+            if self.prefix_sum[mid] <= target:
                 l = mid + 1
             else:
                 r = mid 
-            
-        return l
+
+        return l 
 
 
 
